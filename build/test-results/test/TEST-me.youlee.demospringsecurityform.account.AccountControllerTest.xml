@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="me.youlee.demospringsecurityform.account.AccountControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-12-30T10:01:29" hostname="iugjin-ui-MacBookAir.local" time="0.662">
+  <properties/>
+  <testcase name="index_anonymous()" classname="me.youlee.demospringsecurityform.account.AccountControllerTest" time="0.638"/>
+  <testcase name="admin_user()" classname="me.youlee.demospringsecurityform.account.AccountControllerTest" time="0.012"/>
+  <testcase name="index_user()" classname="me.youlee.demospringsecurityform.account.AccountControllerTest" time="0.009"/>
+  <system-out><![CDATA[19:01:26.601 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [me.youlee.demospringsecurityform.account.AccountControllerTest]: AccountControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:01:26.698 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration me.youlee.demospringsecurityform.DemoSpringSecurityFormApplication for test class me.youlee.demospringsecurityform.account.AccountControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.1)
+
+2023-12-30T19:01:26.975+09:00  INFO 45852 --- [    Test worker] m.y.d.account.AccountControllerTest      : Starting AccountControllerTest using Java 17.0.7 with PID 45852 (started by wookjin in /Users/wookjin/Desktop/Spring_Security)
+2023-12-30T19:01:26.978+09:00  INFO 45852 --- [    Test worker] m.y.d.account.AccountControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-12-30T19:01:27.519+09:00  INFO 45852 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-30T19:01:27.554+09:00  INFO 45852 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2023-12-30T19:01:27.897+09:00  INFO 45852 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-30T19:01:28.038+09:00  INFO 45852 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:49fe6038-b0f5-4f6e-b84b-7a8d37d3c394 user=SA
+2023-12-30T19:01:28.039+09:00  INFO 45852 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-30T19:01:28.069+09:00  INFO 45852 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-30T19:01:28.104+09:00  INFO 45852 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2023-12-30T19:01:28.127+09:00  INFO 45852 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-30T19:01:28.282+09:00  INFO 45852 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-30T19:01:28.859+09:00  INFO 45852 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-30T19:01:28.882+09:00  INFO 45852 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-30T19:01:29.125+09:00  WARN 45852 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-30T19:01:29.193+09:00  INFO 45852 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-12-30T19:01:29.354+09:00  INFO 45852 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2db4a84a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cef5fc9, org.springframework.security.web.context.SecurityContextHolderFilter@1cdb280b, org.springframework.security.web.header.HeaderWriterFilter@425a5c2e, org.springframework.web.filter.CorsFilter@b867869, org.springframework.security.web.csrf.CsrfFilter@6d4df1d2, org.springframework.security.web.authentication.logout.LogoutFilter@6d96a895, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@ab5dde4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@53945f9c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7b6b8cea, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3829306d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f8a44a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40625ac6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73158d35, org.springframework.security.web.access.ExceptionTranslationFilter@726dd367, org.springframework.security.web.access.intercept.AuthorizationFilter@6d911985]
+2023-12-30T19:01:29.566+09:00  INFO 45852 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-12-30T19:01:29.566+09:00  INFO 45852 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-12-30T19:01:29.567+09:00  INFO 45852 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-12-30T19:01:29.592+09:00  INFO 45852 --- [    Test worker] m.y.d.account.AccountControllerTest      : Started AccountControllerTest in 2.785 seconds (process running for 3.598)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = me.youlee.demospringsecurityform.form.SampleController
+           Method = me.youlee.demospringsecurityform.form.SampleController#index(Model, Principal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = index
+             View = null
+        Attribute = message
+            value = Hello Spring Security
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <h1>Hello Spring Security</h1>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]}
+
+Handler:
+             Type = me.youlee.demospringsecurityform.form.SampleController
+           Method = me.youlee.demospringsecurityform.form.SampleController#index(Model, Principal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = index
+             View = null
+        Attribute = message
+            value = Hello admin
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <h1>Hello admin</h1>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=wookjin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = me.youlee.demospringsecurityform.form.SampleController
+           Method = me.youlee.demospringsecurityform.form.SampleController#index(Model, Principal)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = index
+             View = null
+        Attribute = message
+            value = Hello wookjin
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <h1>Hello wookjin</h1>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

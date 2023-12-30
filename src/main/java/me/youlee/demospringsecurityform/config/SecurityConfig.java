@@ -18,7 +18,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
-                .requestMatchers("/", "/info").permitAll()
+                .requestMatchers("/", "/info","/account/**").permitAll()
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
@@ -27,19 +27,22 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails user = User.withUsername("wookjin")
-            .password("{noop}123")
-            .roles("USER")
-            .build();
-        UserDetails admin = User.withUsername("admin")
-            .password("{noop}!@#")
-            .roles("ADMIN")
-            .build();
-        UserDetails[] userDetails = new UserDetails[2];
-        userDetails[0] = user;
-        userDetails[1] = admin;
-        return new InMemoryUserDetailsManager(userDetails);
-    }
+    /**
+     * inmemory authentication
+     */
+//    @Bean
+//    public InMemoryUserDetailsManager userDetailsService() {
+//        UserDetails user = User.withUsername("wookjin")
+//            .password("{noop}123")
+//            .roles("USER")
+//            .build();
+//        UserDetails admin = User.withUsername("admin")
+//            .password("{noop}!@#")
+//            .roles("ADMIN")
+//            .build();
+//        UserDetails[] userDetails = new UserDetails[2];
+//        userDetails[0] = user;
+//        userDetails[1] = admin;
+//        return new InMemoryUserDetailsManager(userDetails);
+//    }
 }
